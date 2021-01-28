@@ -10,6 +10,7 @@ def rec(idx):
     if (idx == n):
         counter +=1
         print(a, counter)
+        print(used)
         return
     for i in range(n):
         if (used[i]):
