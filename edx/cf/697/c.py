@@ -2,7 +2,7 @@ t = int(input())
 # n boys
 # m girls
 # k number of couples ready to dance together
-for ith in range(t):
+for _ in range(t):
     n, m, k = map(int,input().split())
     a = list(map(int,input().split()))
     b = list(map(int,input().split()))
