@@ -1,5 +1,7 @@
-s = str(input())
+s = []
+n = int(input())
 bal = 0
+counter = 0
 def correct(s):
     
     for i in range(len(s)):
@@ -12,9 +14,11 @@ def correct(s):
     return (bal == 0)
 
 def rec(idx, bal):
+    global counter
     if (idx == 2*n):
         if bal == 0:
-            print(s)
+            counter +=1
+            print(s, counter)
         return
     s[idx] = "("
     rec(idx+1, bal+1)
