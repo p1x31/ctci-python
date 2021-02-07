@@ -33,7 +33,7 @@ v = [False] * n
 v[0] = True
 
 #print(graph)
-
+# dont forget to make count 0
 tsp(graph, v, 0, n ,1, 0)
 
 print(min(answer))
