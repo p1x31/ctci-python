@@ -25,9 +25,3 @@ while Min < limit:
         T = Min
         C += 1
 print(C)
-4
-374
-4
-372
-4
-1021
