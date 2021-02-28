@@ -16,7 +16,7 @@ file.close()
 
 limit = sum(Y.values())
 
-T, Min, C = 0,0,0
+T, Min, C = 0,0, # C - max number of reports possible
 while Min < limit:
     Min = limit
     for i in range(n):
