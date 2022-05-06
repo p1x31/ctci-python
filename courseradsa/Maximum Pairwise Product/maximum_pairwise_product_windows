@@ -1,0 +1,2 @@
+#educational_plugin_window = 
+    print(max_pairwise_product_naive(numbers))
