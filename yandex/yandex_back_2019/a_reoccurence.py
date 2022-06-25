@@ -1,13 +1,6 @@
 from sys import stdin,stdout
-import math,bisect
-from collections import Counter,deque,defaultdict
 L = lambda: list(map(int, stdin.readline().strip().split()))
-M = lambda: map(int, stdin.readline().strip().split())
 I = lambda: int(stdin.readline().strip())
-S = lambda: stdin.readline().strip()
-C = lambda: stdin.readline().strip().split()
-def pr(a):return(" ".join(list(map(str,a))))
-#_________________________________________________#
         
 def solve():
     # Example code
@@ -32,3 +25,28 @@ def main():
 
 if __name__ == "__main__":
     main()   
+
+from collections import Counter
+t = int(input())
+
+for _ in range(t):
+    n = int(input())
+    a = list(map(int, input().split()))
+    c = Counter(a)
+    print(max(c.values()))
+
+from collections import Counter
+
+n = int(input()) 
+a = [int(i) for i in input().split()] 
+
+counter = Counter(a)
+
+result = a[0]
+max_count = counter[result]
+for number, count in counter.items():
+    if count > max_count or (count == max_count and number > result):
+        result = number
+        max_count = count
+
+print(result) 
