@@ -1,5 +1,5 @@
 class Solution:
-    def two_sum(self,nums, target):
+    def two_sum(self, nums, target):
         compliments = {}
         result = []
         for index, item in enumerate(nums):
