@@ -10,8 +10,31 @@ def maximum_loot_value(capacity, weights, prices):
     assert all(0 < w <= 2 * 10 ** 6 for w in weights)
     assert all(0 <= p <= 2 * 10 ** 6 for p in prices)
 
-    type here
+    #pseudo
+    # if capacity == 0 or len(weights) == 0:
+    #     return 0
+    # m = weights[0]
+    # amount = min(weights[m], capacity) 
+    # value = prices[m] * amount / weights[m]
+    # weights.pop()
+    # prices.pop()
+    # return value + maximum_loot_value(capacity, weights, prices)
+    cost_weight = {}
+    total = 0
+    for i in range(len(weights)):
+        cost_weight[i] = prices[i] / weights[i]
+    
+    cost_weight = dict(sorted(cost_weight.items(), key=lambda item: item[1], reverse=True))
 
+    for key, sorted_ratio in cost_weight.items():
+        if capacity - weights[key] >= 0:
+            capacity -= weights[key]
+            total += prices[key]
+        else:
+            rest = prices[key] * (capacity / weights[key])
+            total += rest
+            break
+    return total
 
 if __name__ == "__main__":
     data = list(map(int, stdin.read().split()))

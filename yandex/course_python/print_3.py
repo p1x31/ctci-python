@@ -1,0 +1,16 @@
+# input_formula = input()
+# print(f"{input_formula} \n" * 3)
+
+# summ = int(input())
+# print(int(summ - (2.5 * 38))) 
+
+name = str(input())
+price = int(input())
+weight = int(input())
+money = int(input())
+change = int(money - (price * weight))
+print("Чек \n")
+print(f"{name} - {weight}кг - {price}руб/кг \n")
+print(f'Итого: {price * weight}руб \n')
+print(f'Внесено: {money}руб \n')
+print(f"Сдача: {change}руб")
