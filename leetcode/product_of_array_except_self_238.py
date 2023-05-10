@@ -18,6 +18,7 @@ class Solution:
             res[i] = prefix
             prefix *= nums[i]
         postfix = 1
+        # what next line do is to iterate through the list in reverse order last -1 means
         for i in range(len(nums) - 1, -1, -1):
             res[i] *= postfix
             postfix *= nums[i]

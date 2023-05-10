@@ -10,9 +10,8 @@ def pr(a):return(" ".join(list(map(str,a))))
 #_________________________________________________#
         
 def solve():
-    @timeit
-    def add(a, b):
-        return a + b
+    a = sorted([1,4,3,2,4], key=lambda x:-x, reverse=True) 
+    print a
 
 def main():
     for _ in range(I()):
@@ -20,3 +19,5 @@ def main():
 
 if __name__ == "__main__":
     main()   
+
+# count from one to 100

@@ -1,3 +1,5 @@
+#include <cstdio>
+
 int foo(int a, int b)
 {
     return b ? foo(b, a % b) : a;
