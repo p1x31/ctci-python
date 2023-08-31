@@ -1,0 +1,30 @@
+count their number and pour the required number of servings of food. In addition, Katya decided to make an account with photos of cats in order to find their owners. To do this, you need not only to count the cats in the photo, but also learn how to separate the cats among themselves, having selected areas with all the cats,
+
+Cats that come to eat from a bowl are very well-mannered and keep the social distance of the cat. Therefore, it is guaranteed that the cats in the photo do not side by side on horizontal or vertical pixels. But different cats can be in adjacent pixels to each other diagonally.
+
+Help Katya count the cats and find each of them using the results of the existing algorithm!
+Input Format
+
+The input is the result of primary segmentation: M rows, each of them contains N integers (0 denotes the background, 1 denotes the area where Katya's algorithm found the cat). 1 <= N, M <=500
+Output Format
+
+In the first line print the number of unique objects found on the segmentation.
+
+Next, output an NxM matrix (same as the input matrix) labeling common segmented areas into separate objects (each object must have its own unique number).
+Example 1
+Input:
+
+1 0 1
+
+0 0 0
+
+0 1 0
+Conclusion:
+
+3
+
+1 0 2
+
+0 0 0
+
+0 3 0
